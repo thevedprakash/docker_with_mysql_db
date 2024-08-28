@@ -1,0 +1,11 @@
+docker build -t my-mysql-image .
+docker run --name my-mysql-container -d -p 3307:3306 my-mysql-image
+
+docker stop my-mysql-container
+docker rm my-mysql-container
+docker build -t my-mysql-image .
+docker run --name my-mysql-container -d -p 3307:3306 my-mysql-image
+> If Error :
+docker logs my-mysql-container
+mysql -h 127.0.0.1 -P 3307 -u root -p
+mysql -h 127.0.0.1 -P 3307 -u prakashv -p
